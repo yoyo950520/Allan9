@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>首頁 | 徐宥綸的網站</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar" id="sidebar">
+      <h2 class="logo">徐宥綸的網站</h2>
+      <nav>
+        <ul>
+          <li><a href="index.html">🏠 首頁</a></li>
+          <li><a href="about.html">👤 關於我</a></li>
+          <li><a href="skills.html">🛠  技能</a></li>
+          <li><a href="portfolio.html">📁 證照</a></li>
+          <li><a href="contact.html">✉️ 聯絡我</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <button class="hamburger" id="hamburger">&#9776;</button>
+
+    <main class="content">
+    <div class="profile">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX5yy5UXGD6VOurditkh6kO3et1ydkRMnzAw&s" alt="我的頭像" class="avatar" />
+    <h2 class="name">姓名：徐宥綸</h2>
+    <p class="motto">“事情不是足以改變世界才算重要。” - 史蒂夫·賈伯斯 Steve Jobs。</P>
+    <P>（ Things don’t have to change the world to be important -Steve Jobs）</p>
+  </div>
+    </main>
+  </div>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const sidebar = document.getElementById('sidebar');
+    hamburger.addEventListener('click', () => {
+      sidebar.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

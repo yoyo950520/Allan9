@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>證照 | 徐宥綸的網站</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar" id="sidebar">
+      <h2 class="logo">徐宥綸的網站</h2>
+      <nav>
+        <ul>
+          <li><a href="index.html">🏠 首頁</a></li>
+          <li><a href="about.html">👤 關於我</a></li>
+          <li><a href="skills.html">🛠  技能</a></li>
+          <li><a href="portfolio.html">📁 證照</a></li>
+          <li><a href="contact.html">✉️ 聯絡我</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <button class="hamburger" id="hamburger">&#9776;</button>
+
+    <main class="content">
+      <h1>證照</h1>
+      <div class="certificates">
+        <div class="cert">電腦軟體應用丙級</div>
+        <div class="cert">電腦軟體應用乙級</div>
+        <div class="cert">網頁設計丙級</div>
+      </div>
+    </main>
+
+  </div>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const sidebar = document.getElementById('sidebar');
+    hamburger.addEventListener('click', () => {
+      sidebar.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>聯絡我 | 徐宥綸的網站</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar" id="sidebar">
+      <h2 class="logo">徐宥綸的網站</h2>
+      <nav>
+        <ul>
+          <li><a href="index.html">🏠 首頁</a></li>
+          <li><a href="about.html">👤 關於我</a></li>
+          <li><a href="skills.html">🛠 技能</a></li>
+          <li><a href="portfolio.html">📁 證照</a></li>
+          <li><a href="contact.html">✉️ 聯絡我</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <button class="hamburger" id="hamburger">&#9776;</button>
+
+    <main class="content">
+      <h1>聯絡我</h1>
+
+      <form class="contact-form">
+        <label for="name">姓名：</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">電子郵件：</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">留言內容：</label>
+        <textarea id="message" name="message" rows="2" required></textarea>
+        <!--rows 代表為留言內容高度為幾行-->
+        <button type="submit">送出</button>
+      </form>
+    </main>
+  </div>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const sidebar = document.getElementById('sidebar');
+    hamburger.addEventListener('click', () => {
+      sidebar.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
