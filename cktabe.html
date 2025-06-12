@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+<link rel="stylesheet" href="style.css" />
 <head>
   <meta charset="UTF-8">
   <title>課表</title>
   <style>
     body {
       font-family: "Noto Sans TC", sans-serif;
-      background-color: #f0f0f0;
+      background-color: #ffffff;
       padding: 2em;
     }
     table {
@@ -15,11 +16,11 @@
       text-align: center;
     }
     th, td {
-      border: 1px solid #aaa;
+      border: 1px solid #7a1717;
       padding: 10px;
     }
     th {
-      background-color: #7f4f9f;
+      background-color: #81c477;
       color: white;
     }
     td {
@@ -31,6 +32,19 @@
   </style>
 </head>
 <body>
+  <div class="container">
+  <header>
+    <div class="logo">徐宥綸的網站</div>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <nav id="navMenu">
+      <a href="index.html">首頁</a>
+      <a href="cktabe.html">課表關於我</a>
+      <a href="about.html">關於我</a>
+      <a href="skills.html">技能</a>
+      <a href="portfolio.html">證照</a>
+      <a href="contact.html">聯絡我</a>
+    </nav>
+  </header>
   <h1>我的課表</h1>
   <table>
     <tr>
