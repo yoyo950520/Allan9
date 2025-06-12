@@ -1,309 +1,193 @@
 /* 重設基本樣式 */
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  box-sizing: border-box; /* 設定所有元素的盒模型為 border-box，padding 和 border 計入寬高 */
+  margin: 0;              /* 移除所有元素預設外距 */
+  padding: 0;             /* 移除所有元素預設內距 */
 }
 
 body {
-  font-family: "Segoe UI", sans-serif;
-  background-color: #ecf0f1;
-  color: #333;
-  line-height: 1.6;
-  padding: 0;
+  font-family: "Segoe UI", sans-serif; /* 設定字體 */
+  background-color: #ecf0f1;           /* 背景色為淡灰色 */
+  color: #333;                         /* 文字顏色為深灰 */
+  line-height: 1.6;                    /* 行高設定為 1.6，增加閱讀舒適度 */
+  padding: 0;                         /* body 不額外內距 */
 }
 
 /* Header 上方區域 */
 header {
-  background-color: #5e6bd8;
-  color: white;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  background-color: #5e6bd8;          /* 導覽列背景色（藍紫色） */
+  color: white;                       /* 文字白色 */
+  padding: 1rem 2rem;                 /* 上下內距 1rem，左右 2rem */
+  display: flex;                     /* 使用 Flexbox 佈局 */
+  justify-content: space-between;    /* 左右兩端排列元素 */
+  align-items: center;               /* 垂直置中對齊 */
+  position: sticky;                  /* 貼齊視窗頂端 */
+  top: 0;                           /* 貼齊頂部 0 */
+  z-index: 1000;                    /* 置於較高層級，避免被覆蓋 */
 }
 
 header .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1.5rem;                /* 字體大小 1.5 倍 */
+  font-weight: bold;                /* 粗體 */
 }
 
 /* 漢堡選單按鈕 */
 .hamburger {
-  font-size: 26px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  display: none;
+  font-size: 26px;                  /* 字體大小 26px */
+  background: none;                 /* 無背景 */
+  border: none;                    /* 無邊框 */
+  color: white;                    /* 文字白色 */
+  cursor: pointer;                 /* 滑鼠游標變成手指 */
+  display: none;                   /* 預設隱藏 */
 }
 
 /* 導覽列預設為橫排顯示（桌面） */
 nav {
-  display: flex;
-  gap: 1.5rem;
+  display: flex;                   /* 使用 Flexbox 佈局 */
+  gap: 1.5rem;                    /* 子項間距 1.5rem */
 }
 
 nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+  color: white;                   /* 連結文字白色 */
+  text-decoration: none;          /* 無底線 */
+  font-weight: bold;              /* 粗體 */
 }
 
 nav a:hover {
-  text-decoration: underline;
+  text-decoration: underline;    /* 滑鼠移入時加底線 */
 }
 
 /* 手機版：導覽列收合、漢堡選單出現 */
 @media (max-width: 768px) {
   .hamburger {
-    display: block;
+    display: block;               /* 手機時顯示漢堡選單按鈕 */
   }
 
   nav {
-    display: none;
-    flex-direction: column;
-    background-color: #5e6bd8;
-    position: absolute;
-    top: 64px;
-    right: 20px;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    display: none;                /* 手機時導覽列預設隱藏 */
+    flex-direction: column;       /* 導覽列改為垂直排列 */
+    background-color: #5e6bd8;    /* 背景色同header */
+    position: absolute;           /* 絕對定位 */
+    top: 64px;                    /* 距離頂部64px（header高度） */
+    right: 20px;                  /* 距離右邊20px */
+    padding: 1rem;                /* 內距1rem */
+    border-radius: 10px;          /* 圓角10px */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* 輕微陰影 */
   }
 
   nav.show {
-    display: flex;
+    display: flex;                /* 當有 show class，顯示導覽列 */
   }
 
   nav a {
-    padding: 0.5rem 0;
+    padding: 0.5rem 0;            /* 連結上下內距0.5rem */
   }
 }
 
 /* 主內容區域 */
 main {
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  max-width: 1000px;              /* 最大寬度1000px */
+  margin: 2rem auto;              /* 上下外距2rem，左右置中 */
+  padding: 2rem;                  /* 內距2rem */
+  background: white;              /* 背景白色 */
+  border-radius: 16px;            /* 圓角16px */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* 淡淡陰影 */
 }
 
 /* 頭像區塊 */
 .profile {
-  text-align: center;
-  padding: 2rem;
+  text-align: center;             /* 文字置中 */
+  padding: 2rem;                 /* 內距2rem */
 }
 
 .avatar {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 150px;                  /* 寬150px */
+  height: 150px;                 /* 高150px */
+  border-radius: 50%;            /* 圓形 */
+  object-fit: cover;             /* 圖片裁切方式 */
+  margin-bottom: 1rem;           /* 底部外距1rem */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 陰影 */
 }
 
 .name {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  color: #2c3e50;
+  font-size: 1.5rem;             /* 字體大小1.5倍 */
+  margin-bottom: 0.5rem;         /* 底部外距0.5rem */
+  color: #2c3e50;                /* 深藍灰色文字 */
 }
 
 .motto {
-  font-style: italic;
-  color: #555;
+  font-style: italic;            /* 斜體 */
+  color: #555;                   /* 灰色文字 */
 }
 
 /* 表單 */
 .contact-form {
-  max-width: 500px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+  max-width: 500px;              /* 最大寬度500px */
+  margin: 0 auto;                /* 置中 */
+  display: flex;                 /* Flexbox */
+  flex-direction: column;        /* 垂直排列 */
+  gap: 15px;                    /* 子元素間距15px */
 }
 
 .contact-form label {
-  font-weight: bold;
+  font-weight: bold;             /* 粗體 */
 }
 
 .contact-form input,
 .contact-form textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 16px;
-  width: 100%;
+  padding: 10px;                 /* 內距10px */
+  border: 1px solid #ccc;        /* 灰色邊框 */
+  border-radius: 6px;            /* 圓角6px */
+  font-size: 16px;               /* 文字大小16px */
+  width: 100%;                   /* 寬度填滿父元素 */
 }
 
 .contact-form button {
-  padding: 12px;
-  background-color: #007acc;
-  color: white;
-  font-size: 16px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  padding: 12px;                 /* 內距12px */
+  background-color: #007acc;     /* 按鈕藍色背景 */
+  color: white;                  /* 文字白色 */
+  font-size: 16px;               /* 文字大小16px */
+  border: none;                 /* 無邊框 */
+  border-radius: 6px;            /* 圓角6px */
+  cursor: pointer;               /* 游標手指 */
+  transition: background-color 0.3s ease; /* 背景色過渡效果 */
 }
 
 .contact-form button:hover {
-  background-color: #005fa3;
+  background-color: #005fa3;     /* 滑鼠移入背景變深藍 */
 }
+
+/* 技能按鈕區塊 */
 .skill-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 20px;
-  justify-content: center;  /* 新增：讓按鈕置中對齊 */
+  display: flex;                 /* Flexbox */
+  flex-wrap: wrap;               /* 換行 */
+  gap: 12px;                    /* 間距12px */
+  margin-top: 20px;             /* 上方外距20px */
+  justify-content: center;      /* 水平置中排列 */
 }
 
+/* 單一技能按鈕 */
 .skill {
-  display: inline-block;
-  padding: 12px 24px;
-  border-radius: 12px;          /* 圓角 */
-  background-color: #4a90e2;    /* 主色 */
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  user-select: none;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  min-width: 100px;
-  text-align: center;
-  font-size: 16px;
+  display: inline-block;          /* 內聯區塊元素 */
+  padding: 12px 24px;             /* 上下12px，左右24px內距 */
+  border-radius: 12px;            /* 圓角12px */
+  background-color: #4a90e2;      /* 藍色背景 */
+  color: white;                   /* 白色字 */
+  font-weight: 600;               /* 半粗體 */
+  cursor: pointer;                /* 手指游標 */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* 動畫過渡 */
+  user-select: none;              /* 不可選取文字 */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* 陰影 */
+  min-width: 100px;               /* 最小寬度100px */
+  text-align: center;             /* 文字置中 */
+  font-size: 16px;                /* 文字大小16px */
 }
 
-/* 滑鼠移入效果 */
+/* 技能按鈕滑鼠移入效果 */
 .skill:hover {
-  background-color: #4e5963;  /* 深色背景 */
-  transform: translateY(-4px) scale(1.05);  /* 向上移且放大 */
-  box-shadow: 0 8px 15px #4e5963;
-}
-.school-row {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin-bottom: 40px;
+  background-color: #4e5963;      /* 深灰藍背景 */
+  transform: translateY(-4px) scale(1.05); /* 向上移動並放大 */
+  box-shadow: 0 8px 15px #4e5963; /* 加強陰影 */
 }
 
-/* 圖左文字右 */
-.school-row:not(.reverse) {
-  flex-direction: row;
-}
-
-/* 文字左圖右 */
-.school-row.reverse {
-  flex-direction: row-reverse;
-}
-
-.school-row .text {
-  flex: 1;
-  font-size: 18px;
-}
-
-.school-row .text h2 {
-  margin: 0 0 10px 0;
-}
-
-.school-row .text a {
-  color: #3366cc;
-  text-decoration: none;
-}
-
-.school-row .text a:hover {
-  text-decoration: underline;
-}
-
-.school-row .map iframe {
-  width: 400px;
-  height: 200px;
-  border: 0;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-/* 響應式：螢幕寬度小於600px時改成上下排列 */
-@media (max-width: 600px) {
-  .school-row,
-  .school-row.reverse {
-    flex-direction: column !important;
-    text-align: center;
-  }
-  .school-row .map iframe {
-    width: 100%;
-    max-width: 400px;
-    height: 200px;
-    margin-bottom: 15px;
-  }
-  .school-row .text {
-    margin-bottom: 15px;
-  }
-}
-.content h1 {
-  text-align: center;
-}
-.content {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-  text-align: center;
-}
-
-.content h1 {
-  margin-bottom: 30px;
-  font-size: 2.5rem;
-  color: #333;
-}
-
-.certificates {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.cert {
-  background-color: #f0f0f0;
-  border-radius: 15px;
-  padding: 40px 40px;  /* 內距上下加大 */
-  min-width: 220px;
-  min-height: 120px;   /* 最小高度設定 */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #333;
-  cursor: default;
-  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-  user-select: none;
-}
-
-
-.cert:hover {
-  background-color: #6f90d3;
-  color: #fff;
-  box-shadow: 0 8px 16px rgba(152, 75, 229, 0.6);
-}
-/* 讓 main 距離頂部導覽列多一點空間 */
-main.content {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-  text-align: center;
-  margin-top: 80px; /* 預留導覽列高度+一些間距 */
-}
-
-/* 證照區塊上方增加 20px */
-.certificates {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  margin-top: 20px;  /* 你要的空隙 */
-}
+/* 學
