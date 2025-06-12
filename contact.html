@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-<link rel="stylesheet" href="style.css" />
 <head>
-  <meta charset="UTF-8">
-  <title>課表</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>聯絡我 | 徐宥綸的網站</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
@@ -19,50 +20,33 @@
       <a href="contact.html">聯絡我</a>
     </nav>
   </header>
-  <h1>我的課表</h1>
-  <table>
-    <tr>
-      <th></th>
-      <th>日</th>
-      <th>一</th>
-      <th>二</th>
-      <th>三</th>
-      <th>四</th>
-      <th>五</th>
-      <th>六</th>
-    </tr>
-    <tr>
-      <td class="time">第1節<br>(08:10 - 09:00)</td>
-      <td></td><td></td><td></td><td></td><td></td><td>體育(桌球)<br>日四技通識<br>W0105</td><td></td>
-    </tr>
-    <tr>
-      <td class="time">第2節<br>(09:10 - 10:00)</td>
-      <td></td><td>經濟學<br>日四技醫護<br>10414</td><td>數位繪圖設計<br>日四技資管<br>10302</td><td>資訊管理導論<br>日四技資管<br>30802</td><td>進階程式設計<br>日四技資管<br>30802</td><td>體育(桌球)<br>日四技通識<br>W0105</td><td></td>
-    </tr>
-    <tr>
-      <td class="time">第3節<br>(10:10 - 11:00)</td>
-      <td></td><td>經濟學<br>日四技醫護<br>10414</td><td>數位繪圖設計<br>日四技資管<br>10302</td><td>資訊管理導論<br>日四技資管<br>30802</td><td>進階程式設計<br>日四技資管<br>30802</td><td>智慧財產權<br>日四技通識<br>10509</td><td></td>
-    </tr>
-    <tr>
-      <td class="time">第4節<br>(11:10 - 12:00)</td>
-      <td></td><td>經濟學<br>日四技醫護<br>10414</td><td>數位繪圖設計<br>日四技資管<br>10302</td><td>資訊管理導論<br>日四技資管<br>30802</td><td>進階程式設計<br>日四技資管<br>30802</td><td>智慧財產權<br>日四技通識<br>10509</td><td></td>
-    </tr>
-    <tr>
-      <td class="time">第5節<br>(13:10 - 14:00)</td>
-      <td></td><td>國文<br>日四技通識<br>10410</td><td></td><td>進階程式設計<br>日四技資管<br>30802</td><td>網頁設計<br>日四技資管<br>10302</td><td>物流業概論<br>日四技行銷<br>10513</td><td></td>
-    </tr>
-    <tr>
-      <td class="time">第6節<br>(14:10 - 15:00)</td>
-      <td></td><td>國文<br>日四技通識<br>10410</td><td></td><td>進階程式設計<br>日四技資管<br>30802</td><td>網頁設計<br>日四技資管<br>10302</td><td>物流業概論<br>日四技行銷<br>10513</td><td></td>
-    </tr>
-    <tr>
-      <td class="time">第7節<br>(15:10 - 16:00)</td>
-      <td></td><td>英文<br>日四技通識<br>30315</td><td></td><td></td><td>網頁設計<br>日四技資管<br>10302</td><td></td><td></td>
-    </tr>
-    <tr>
-      <td class="time">第8節<br>(16:10 - 17:00)</td>
-      <td></td><td>英文<br>日四技通識<br>30315</td><td></td><td></td><td>網頁設計<br>日四技資管<br>10302</td><td></td><td></td>
-    </tr>
-  </table>
+
+    <button class="hamburger" id="hamburger">&#9776;</button>
+
+    <main class="content">
+      <h1>聯絡我</h1>
+
+      <form class="contact-form">
+        <label for="name">姓名：</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">電子郵件：</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">留言內容：</label>
+        <textarea id="message" name="message" rows="2" required></textarea>
+        <!--rows 代表為留言內容高度為幾行-->
+        <button type="submit">送出</button>
+      </form>
+    </main>
+  </div>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const sidebar = document.getElementById('sidebar');
+    hamburger.addEventListener('click', () => {
+      sidebar.classList.toggle('open');
+    });
+  </script>
 </body>
 </html>
