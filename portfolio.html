@@ -8,19 +8,17 @@
 </head>
 <body>
   <div class="container">
-    <aside class="sidebar" id="sidebar">
-      <h2 class="logo">徐宥綸的網站</h2>
-      <nav>
-        <ul>
-          <li><a href="index.html">🏠 首頁</a></li>
-          <li><a href="about.html">👤 關於我</a></li>
-          <li><a href="skills.html">🛠  技能</a></li>
-          <li><a href="portfolio.html">📁 證照</a></li>
-          <li><a href="contact.html">✉️ 聯絡我</a></li>
-        </ul>
-      </nav>
-    </aside>
-
+  <header>
+    <div class="logo">徐宥綸的網站</div>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <nav id="navMenu">
+      <a href="index.html">首頁</a>
+      <a href="about.html">關於我</a>
+      <a href="skills.html">技能</a>
+      <a href="portfolio.html">證照</a>
+      <a href="contact.html">聯絡我</a>
+    </nav>
+  </header>
     <button class="hamburger" id="hamburger">&#9776;</button>
 
     <main class="content">
