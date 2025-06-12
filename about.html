@@ -6,86 +6,74 @@
   <title>關於我 | 徐宥綸的網站</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    p{
+    p {
       font-size: 20px;
-      }
-    
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <aside class="sidebar" id="sidebar">
-      <h2 class="logo">徐宥綸的網站</h2>
-      <nav>
-        <ul>
-          <li><a href="index.html">🏠 首頁</a></li>
-          <li><a href="about.html">👤 關於我</a></li>
-          <li><a href="skills.html">🛠  技能</a></li>
-          <li><a href="portfolio.html">📁 證照</a></li>
-          <li><a href="contact.html">✉️ 聯絡我</a></li>
-        </ul>
-      </nav>
-    </aside>
+  <!-- 頂部導覽列 -->
+  <header>
+    <div class="logo">徐宥綸的網站</div>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <nav id="navMenu">
+      <a href="index.html">首頁</a>
+      <a href="about.html">關於我</a>
+      <a href="skills.html">技能</a>
+      <a href="portfolio.html">證照</a>
+      <a href="contact.html">聯絡我</a>
+    </nav>
+  </header>
 
-    <button class="hamburger" id="hamburger">&#9776;</button>
+  <!-- 主內容 -->
+  <main class="content">
+    <h1>就讀學校</h1>
 
-<main class="content">
-  <h1>就讀學校</h1>
+    <!-- 國小 -->
+    <div class="school-row color1">
+      <div class="text">
+        <a href="http://www.fsps.ntpc.edu.tw/"><h2>復興國小</h2></a>
+      </div>
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d163754.5040855596!2d121.41917733130826!3d24.915116144210526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468027aa5af0ed1%3A0xf92c9a42a7dd3fc9!2z5paw5YyX5biC5Lit5ZKM5Y2A5b6p6IiI5ZyL5rCR5bCP5a24!5e0!3m2!1szh-TW!2sus!4v1749605098348!5m2!1szh-TW!2sus" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
 
-  <!-- 國小 -->
-  <div class="school-row color1">
-    <div class="text">
-      <a href="http://www.fsps.ntpc.edu.tw/"><h2>復興國小</h2></a>
+    <!-- 國中 -->
+    <div class="school-row color2 reverse">
+      <div class="text">
+        <a href="http://www.jhsh.ntpc.edu.tw/"><h2>錦和國中</h2></a>
+      </div>
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.2228068846325!2d121.48850907515656!3d24.992543977843244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468028787ac9d53%3A0x1f58827a5c04a377!2z5paw5YyX5biC56uL6Yym5ZKM6auY5Lit!5e0!3m2!1szh-TW!2sus!4v1749605016398!5m2!1szh-TW!2sus" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
     </div>
-  <!--嵌入google地圖-->
-    <div class="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d163754.5040855596!2d121.41917733130826!3d24.915116144210526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468027aa5af0ed1%3A0xf92c9a42a7dd3fc9!2z5paw5YyX5biC5Lit5ZKM5Y2A5b6p6IiI5ZyL5rCR5bCP5a24!5e0!3m2!1szh-TW!2sus!4v1749605098348!5m2!1szh-TW!2sus" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-  </div>
 
-  <!-- 國中 -->
-  <div class="school-row color2 reverse">
-    <div class="text">
-      <a href="http://www.jhsh.ntpc.edu.tw/"><h2>錦和國中</h2></a>
+    <!-- 高中 -->
+    <div class="school-row color1">
+      <div class="text">
+        <a href="https://www.ckvs.ntpc.edu.tw/home"><h2>智光商工</h2></a>
+      </div>
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.132952935726!2d121.5117563751567!3d24.995597877841366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468020aa969f86b%3A0xd7ff194e165ac0b4!2z5paw5YyX5biC56eB56uL5pm65YWJ6auY57Sa5ZWG5bel6IG35qWt5a245qCh!5e0!3m2!1szh-TW!2sus!4v1749604977879!5m2!1szh-TW!2sus" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
     </div>
-    <!--嵌入google地圖-->
-    <div class="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.2228068846325!2d121.48850907515656!3d24.992543977843244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468028787ac9d53%3A0x1f58827a5c04a377!2z5paw5YyX5biC56uL6Yym5ZKM6auY5Lit!5e0!3m2!1szh-TW!2sus!4v1749605016398!5m2!1szh-TW!2sus" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-  </div>
 
-  <!-- 高中 -->
-  <div class="school-row color1">
-    <div class="text">
-      <a href="https://www.ckvs.ntpc.edu.tw/home"><h2>智光商工</h2></a>
+    <!-- 大學 -->
+    <div class="school-row color2 reverse">
+      <div class="text">
+        <a href="https://www.aeust.edu.tw/"><h2>亞東科技大學</h2></a>
+      </div>
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.144837349191!2d121.45054397515663!3d24.995193977841545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346802b13f0af2fb%3A0x64db47a714236569!2z5Lqe5p2x56eR5oqA5aSn5a24!5e0!3m2!1szh-TW!2sus!4v1749604933324!5m2!1szh-TW!2sus" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
     </div>
-      <!--嵌入google地圖-->
-    <div class="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.132952935726!2d121.5117563751567!3d24.995597877841366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468020aa969f86b%3A0xd7ff194e165ac0b4!2z5paw5YyX5biC56eB56uL5pm65YWJ6auY57Sa5ZWG5bel6IG35qWt5a245qCh!5e0!3m2!1szh-TW!2sus!4v1749604977879!5m2!1szh-TW!2sus" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-  </div>
-
-  <!-- 大學 -->
-  <div class="school-row color2 reverse">
-    <div class="text">
-      <a href="https://www.aeust.edu.tw/"><h2>亞東科技大學</h2></a>
-    </div>
-      <!--嵌入google地圖-->
-    <div class="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.144837349191!2d121.45054397515663!3d24.995193977841545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346802b13f0af2fb%3A0x64db47a714236569!2z5Lqe5p2x56eR5oqA5aSn5a24!5e0!3m2!1szh-TW!2sus!4v1749604933324!5m2!1szh-TW!2sus" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-  </div>
-</main>
-
-
-  </div>
+  </main>
 
   <script>
-    const hamburger = document.getElementById('hamburger');
-    const sidebar = document.getElementById('sidebar');
-    hamburger.addEventListener('click', () => {
-      sidebar.classList.toggle('open');
-    });
+    function toggleMenu() {
+      document.getElementById('navMenu').classList.toggle('show');
+    }
   </script>
 </body>
 </html>
